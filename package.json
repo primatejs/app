@@ -12,7 +12,7 @@
   },
   "type": "module",
   "dependencies": {
-    "primate": "^0.6.3",
-    "primate-json-store": "^0.4.3"
+    "primate": "^0.7.0",
+    "primate-json-store": "^0.4.4"
   }
 }
