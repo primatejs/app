@@ -1,0 +1,2 @@
+#!/bin/sh
+deno run --import-map=import-map.json --allow-read --allow-write --allow-net app.js

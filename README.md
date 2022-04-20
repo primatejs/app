@@ -3,9 +3,14 @@
 This is an example application for the [Primate][primate] framework. It is
 reflected in the Primate [Getting started guide][getting-started].
 
-To get started, clone this repository and run `npm install`. To get the example
-running you will have to create your own SSL certificate and key as
-demonstrated in the guide.
+## How to run
+
+Clone this repository and execute `./make-ssl` to create your own SSL
+certificate and key as demonstrated in the guide.
+
+For Node.js, execute `./node.run`.
+
+For Deno, execute `./deno.run`.
 
 ## License
 

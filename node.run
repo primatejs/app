@@ -1,0 +1,2 @@
+#!/bin/sh
+npm install && node --experimental-json-modules app.js

@@ -1,18 +1,15 @@
 {
   "name": "primate-app",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Primate core team <core@primatejs.com>",
   "homepage": "https://primatejs.com",
   "bugs": "https://github.com/primatejs/primate-app/issues",
   "repository": "https://github.com/primatejs/primate-app",
   "description": "Primate framework example app",
   "license": "BSD-3-Clause",
-  "scripts": {
-    "start": "node --experimental-json-modules app.js"
-  },
   "type": "module",
   "dependencies": {
-    "primate": "^0.7.0",
+    "primate": "^0.7.4",
     "primate-json-store": "^0.4.4"
   }
 }
