@@ -9,7 +9,6 @@
   "license": "BSD-3-Clause",
   "type": "module",
   "dependencies": {
-    "primate": "^0.7.4",
-    "primate-json-store": "^0.4.4"
+    "primate": "^0.7.4"
   }
 }
