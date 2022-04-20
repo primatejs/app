@@ -5,8 +5,7 @@ reflected in the Primate [Getting started guide][getting-started].
 
 ## How to run
 
-Clone this repository and execute `./make-ssl` to create your own SSL
-certificate and key as demonstrated in the guide.
+Clone this repository.
 
 For Node.js, execute `./node.run`.
 
