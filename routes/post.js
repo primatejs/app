@@ -3,6 +3,8 @@ import Post from "../domains/Post.js";
 
 router.alias("_id", "(?<_id>[a-z0-9]*)");
 
+router.get("/", () => redirect`/posts`);
+
 router.get("/posts", () => html`<post-index posts=${Post.find()} />`);
 
 router.get("/post/view/_id", async ({path}) => {
