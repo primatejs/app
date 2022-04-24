@@ -1,13 +1,13 @@
-<div data-for="post">
-  <h1 data-value="title"></h1>
-  <p data-value="text"></p>
-  <a data-href="/post/edit/${_id}">Edit post</a>
+<div for="${post}">
+  <h1 value="${title}"></h1>
+  <p value="${text}"></p>
+  <a href="/post/edit/${_id}">Edit post</a>
   <h2>Comments</h2>
-  <div data-for="comments">
-    <p data-value="text"></p>
+  <div for="${comments}">
+    <p value="${text}"></p>
   </div>
-  <a data-href="/comment/add?post_id=${_id}">Add comment</a>
-  <form data-action="/post/delete/${_id}" method="post">
+  <a href="/comment/add?post_id=${_id}">Add comment</a>
+  <form action="/post/delete/${_id}" method="post">
     <input type="submit" value="Delete post" />
   </form>
 </div>

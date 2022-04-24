@@ -1,12 +1,12 @@
-<form data-for="post" method="post">
+<form for="${post}" method="post">
   <h1>Add/edit post</h1>
   <p>
-    <input name="title" data-value="title"></textarea>
-    <div data-value="errors.title"></div>
+    <input name="title" value="${title}"></textarea>
+    <div value="${errors.title}"></div>
   </p>
   <p>
-    <textarea name="text" data-value="text"></textarea>
-    <div data-value="errors.text"></div>
+    <textarea name="text" value="${text}"></textarea>
+    <div value="${errors.text}"></div>
   </p>
-  <input type="submit" value="Save post" />
+  <input-submit value="Save post" />
 </form>

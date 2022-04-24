@@ -9,10 +9,10 @@ router.map("/comment/add", request => {
 });
 
 router.get("/comment/add", ({comment}) =>
-  html`<comment-add comment=${comment} />`);
+  html`<comment-add comment="${comment}" />`);
 
 router.post("/comment/add", async ({comment, payload}) =>
   await comment.save(payload)
     ? redirect`/post/view/${comment.post_id}`
-    : html`<comment-add comment=${comment} />`);
+    : html`<comment-add comment="${comment}" />`);
 
