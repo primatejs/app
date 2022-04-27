@@ -10,7 +10,7 @@
   "type": "module",
   "dependencies": {
     "primate": "^0.8.1",
-    "primate-react": "^0.1.0",
+    "primate-react": "^0.1.1",
     "react": "^18.1.0"
   }
 }
