@@ -1,6 +1,6 @@
 {
   "name": "primate-app",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "author": "Primate core team <core@primatejs.com>",
   "homepage": "https://primatejs.com",
   "bugs": "https://github.com/primatejs/primate-app/issues",
@@ -9,7 +9,7 @@
   "license": "BSD-3-Clause",
   "type": "module",
   "dependencies": {
-    "primate": "^0.8.0",
+    "primate": "^0.8.1",
     "primate-react": "^0.1.0",
     "react": "^18.1.0"
   }
