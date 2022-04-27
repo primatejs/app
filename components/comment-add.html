@@ -1,4 +1,4 @@
-<form for="${comment}" method="post">
+<form action="/html/comment/add?post_id=${post._id}" for="${comment}" method="post">
   <h1>
     <span>Comment on </span>
     <span value="${post.title}"></span>
@@ -9,4 +9,3 @@
   </p>
   <input-submit value="Submit comment" />
 </form>
-
