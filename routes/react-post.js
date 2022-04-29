@@ -39,5 +39,5 @@ router.post("/react/post/delete/_id", async ({path}) => {
   defined(post);
 
   await post.delete();
-  return redirect`/posts`;
+  return redirect`/react/posts`;
 });
