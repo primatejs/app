@@ -11,6 +11,7 @@
   "dependencies": {
     "primate": "^0.8.1",
     "primate-react": "^0.1.1",
+    "primate-vue": "^0.1.0",
     "react": "^18.1.0"
   }
 }
