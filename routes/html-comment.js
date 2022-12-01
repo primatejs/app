@@ -1,4 +1,5 @@
-import {router, defined, html, redirect} from "primate";
+import {router, html, redirect} from "primate";
+import {defined} from "dyndef";
 import Comment from "../domains/Comment.js";
 
 router.map("/html/comment/add", request => {

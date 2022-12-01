@@ -1,5 +1,0 @@
-#!/bin/sh
-if [ ! -d ssl ]; then
-  ./make.ssl
-fi
-deno run --import-map=import-map.json --allow-read --allow-write --allow-net app.js

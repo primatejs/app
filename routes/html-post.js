@@ -1,4 +1,5 @@
-import {router, defined, html, redirect} from "primate";
+import {router, html, redirect} from "primate";
+import {defined} from "dyndef";
 import Post from "../domains/Post.js";
 
 router.get("/html", () => redirect`/html/posts`);
