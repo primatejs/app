@@ -7,9 +7,7 @@ reflected in the Primate [Getting started guide][getting-started].
 
 Clone this repository.
 
-For Node.js, execute `./node.run`.
-
-For Deno, execute `./deno.run`.
+Execute `.run`.
 
 ## License
 

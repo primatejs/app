@@ -1,6 +1,0 @@
-{
-  "imports": {
-    "runtime-compat": "https://deno.land/x/runtime_compat@0.1.6/exports.js",
-    "primate": "https://deno.land/x/primate@0.8.1/exports.js"
-  }
-}

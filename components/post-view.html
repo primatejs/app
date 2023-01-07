@@ -1,10 +1,10 @@
 <div for="${post}">
-  <h1 value="${title}"></h1>
-  <p value="${text}"></p>
+  <h1>${title}</h1>
+  <p>${text}</p>
   <a href="/html/post/edit/${_id}">Edit post</a>
   <h2>Comments</h2>
   <div for="${comments}">
-    <p value="${text}"></p>
+    <p>${text}</p>
   </div>
   <a href="/html/comment/add?post_id=${_id}">Add comment</a>
   <form action="/html/post/delete/${_id}" method="post">

@@ -1,11 +1,8 @@
 <form action="/html/comment/add?post_id=${post._id}" for="${comment}" method="post">
-  <h1>
-    <span>Comment on </span>
-    <span value="${post.title}"></span>
-  </h1>
+  <h1>Comment on ${post.title}</h1>
   <p>
     <textarea name="text" value="${text}"></textarea>
-    <div value="${errors.text}"></div>
+    <div>${errors.text}</div>
   </p>
   <input-submit value="Submit comment" />
 </form>
