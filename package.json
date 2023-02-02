@@ -1,6 +1,6 @@
 {
   "name": "primate-app",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "author": "Terrablue <terrablue@proton.me>",
   "homepage": "https://primatejs.com",
   "bugs": "https://github.com/primatejs/primate-app/issues",
@@ -12,7 +12,7 @@
     "@primate/domains": "^0.1.0",
     "@primate/html": "^0.1.0",
     "@primate/redirect": "^0.1.0",
-    "primate": "^0.9.0",
+    "primate": "^0.9.1",
     "runtime-compat": "^0.12.2"
   },
   "devDependencies": {
