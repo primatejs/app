@@ -1,22 +1,21 @@
-import {html, redirect} from "primate";
-import {defined} from "dyndef";
+import html from "@primate/html";
+import redirect from "@primate/redirect";
+import {defined} from "runtime-compat/dyndef";
 import Post from "../domains/Post.js";
 
 export default router => {
-  router.get("/html", () => redirect`/html/posts`);
+  router.get("/posts", () => html`<post-index posts="${Post.find()}" />`);
 
-  router.get("/html/posts", () => html`<post-index posts="${Post.find()}" />`);
-
-  router.get("/html/post/view/_id", async ({path}) => {
-    const {_id} = path;
+  router.get("/post/view/_id", async ({named}) => {
+    const {_id} = named;
     defined(_id);
     const post = await Post.one(_id);
     defined(post);
     return html`<post-view post="${post}" />`;
   });
 
-  router.map("/html/post/edit/_id", async request => {
-    const {_id} = request.path;
+  router.map("/post/edit/_id", async request => {
+    const {_id} = request.named;
     // In case we have an id, we're editing, otherwise adding
     const post = _id === undefined ? new Post() : await Post.one(_id);
     // Make sure that the post exists
@@ -24,21 +23,20 @@ export default router => {
     return {...request, post};
   });
 
-  router.get("/html/post/edit/_id", ({post}) =>
-    html`<post-edit post="${post}" />`);
+  router.get("/post/edit/_id", ({post}) => html`<post-edit post="${post}" />`);
 
-  router.post("/html/post/edit/_id", async ({post, payload}) =>
+  router.post("/post/edit/_id", async ({post, payload}) =>
     await post.save(payload)
-      ? redirect`/html/post/view/${post._id}`
+      ? redirect`/post/view/${post._id}`
       : html`<post-edit post="${post}" />`);
 
-  router.post("/html/post/delete/_id", async ({path}) => {
+  router.post("/post/delete/_id", async ({path}) => {
     const {_id} = path;
     defined(_id);
     const post = await Post.one(_id);
     defined(post);
 
     await post.delete();
-    return redirect`/html/posts`;
+    return redirect`/posts`;
   });
 };

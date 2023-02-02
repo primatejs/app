@@ -1,13 +1,13 @@
-<div for="${post}">
-  <h1>${title}</h1>
-  <p>${text}</p>
-  <a href="/html/post/edit/${_id}">Edit post</a>
+<div>
+  <h1>${post.title}</h1>
+  <p>${post.text}</p>
+  <a href="/post/edit/${post._id}">Edit post</a>
   <h2>Comments</h2>
-  <div for="${comments}">
-    <p>${text}</p>
+  <div for="${post.comments}">
+    <p>${post.text}</p>
   </div>
-  <a href="/html/comment/add?post_id=${_id}">Add comment</a>
-  <form action="/html/post/delete/${_id}" method="post">
+  <a href="/comment/add?post_id=${post._id}">Add comment</a>
+  <form action="/post/delete/${post._id}" method="post">
     <input type="submit" value="Delete post" />
   </form>
 </div>

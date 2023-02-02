@@ -2,4 +2,4 @@
 if [ ! -d ssl ]; then
   ./make.ssl
 fi
-npm install && node --experimental-json-modules app.js
+npx primate

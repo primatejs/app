@@ -1,18 +1,25 @@
 {
   "name": "primate-app",
-  "version": "0.8.1",
-  "author": "Primate core team <core@primatejs.com>",
+  "version": "0.9.0",
+  "author": "Terrablue <terrablue@proton.me>",
   "homepage": "https://primatejs.com",
   "bugs": "https://github.com/primatejs/primate-app/issues",
   "repository": "https://github.com/primatejs/primate-app",
-  "description": "Primate framework example app",
-  "license": "BSD-3-Clause",
+  "description": "Primate template app",
+  "license": "MIT",
   "type": "module",
   "dependencies": {
-    "dyndef": "^0.3.0",
-    "primate": "^0.8.1",
-    "primate-react": "^0.1.1",
-    "primate-vue": "^0.1.0",
-    "react": "^18.1.0"
+    "@primate/domains": "^0.1.0",
+    "@primate/html": "^0.1.0",
+    "@primate/redirect": "^0.1.0",
+    "primate": "^0.9.0",
+    "runtime-compat": "^0.12.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/eslint-parser": "^7.19.1",
+    "@babel/plugin-syntax-import-assertions": "^7.20.0",
+    "eslint": "^8.33.0",
+    "eslint-plugin-json": "^3.1.0"
   }
 }
