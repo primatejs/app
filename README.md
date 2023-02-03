@@ -4,9 +4,7 @@ This is an example application for the [Primate][primate] framework.
 
 ## How to run
 
-Clone this repository.
-
-Execute `npx -y primate`.
+Clone this repository and run `npm i && npx -y primate`.
 
 ## License
 
