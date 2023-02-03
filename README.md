@@ -6,7 +6,7 @@ This is an example application for the [Primate][primate] framework.
 
 Clone this repository.
 
-Execute `./run`.
+Execute `npx -y primate`.
 
 ## License
 

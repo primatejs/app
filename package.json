@@ -10,10 +10,9 @@
   "type": "module",
   "dependencies": {
     "@primate/domains": "^0.1.0",
-    "@primate/html": "^0.1.0",
+    "@primate/html": "^0.2.0",
     "@primate/redirect": "^0.1.0",
-    "primate": "^0.9.1",
-    "runtime-compat": "^0.12.2"
+    "runtime-compat": "^0.12.3"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",

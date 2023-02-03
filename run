@@ -1,5 +1,0 @@
-#!/bin/sh
-if [ ! -d ssl ]; then
-  ./make.ssl
-fi
-npx primate

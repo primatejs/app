@@ -4,7 +4,7 @@ import {defined} from "runtime-compat/dyndef";
 import Post from "../domains/Post.js";
 
 export default router => {
-  router.get("/posts", () => html`<post-index posts="${Post.find()}" />`);
+  router.get("/", () => html`<post-index posts="${Post.find()}" />`);
 
   router.get("/post/view/_id", async ({named}) => {
     const {_id} = named;
