@@ -14,8 +14,8 @@ export default router => {
   router.get("/comment/add", ({comment}) =>
     html`<comment-add comment="${comment}" />`);
 
-  router.post("/comment/add", async ({comment, payload}) =>
-    await comment.save(payload)
+  router.post("/comment/add", async ({comment, body}) =>
+    await comment.save(body)
       ? redirect`/post/view/${comment.post_id}`
       : html`<comment-add comment="${comment}" />`);
 };

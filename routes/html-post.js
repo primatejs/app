@@ -25,8 +25,8 @@ export default router => {
 
   router.get("/post/edit/_id", ({post}) => html`<post-edit post="${post}" />`);
 
-  router.post("/post/edit/_id", async ({post, payload}) =>
-    await post.save(payload)
+  router.post("/post/edit/_id", async ({post, body}) =>
+    await post.save(body)
       ? redirect`/post/view/${post._id}`
       : html`<post-edit post="${post}" />`);
 
