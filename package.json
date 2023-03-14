@@ -8,10 +8,13 @@
   "description": "Primate template app",
   "license": "MIT",
   "type": "module",
+  "scripts": {
+    "start": "npx -y primate@latest"
+  },
   "dependencies": {
     "@primate/domains": "^0.1.0",
-    "@primate/html": "^0.2.1",
-    "@primate/redirect": "^0.1.0",
+    "@primate/html": "^0.4.0",
+    "@primate/redirect": "^0.2.0",
     "runtime-compat": "^0.12.3"
   },
   "devDependencies": {
