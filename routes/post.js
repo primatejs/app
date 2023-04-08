@@ -9,8 +9,8 @@ export default (router, {svelte, html, htmx}) => {
   router.get("/add", () => htmx("post-add"));
 
   router.post("/add", ({body}) => html(`
-    Adding a post with:
-    title ${body.title}
-    text: ${body.text}
+    <h2>Adding a post with:</h2>
+    <div><strong>Title</strong> ${body.title}</div>
+    <div><strong>Text</strong> ${body.text}</div>
   `, {adhoc: true}));
 };
