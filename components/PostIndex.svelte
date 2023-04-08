@@ -12,4 +12,4 @@
 {#each posts as post}
 <h2><a href="/post/view/{post.id}">{post.title}</a></h2>
 {/each}
-<h3><a href="/post/edit/">add post</a></h3>
+<h3><a href="/add">add post</a></h3>

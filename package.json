@@ -1,5 +1,6 @@
 {
-  "name": "primate-app",
+  "name": "@primate/app",
+  "private": true,
   "version": "0.11.0",
   "description": "Primate template app",
   "homepage": "https://primatejs.com",
@@ -11,7 +12,9 @@
     "start": "npx -y primate"
   },
   "dependencies": {
-    "@primate/svelte": "^0.2.0",
+    "@primate/htmx": "^0.5.1",
+    "@primate/svelte": "^0.2.1",
+    "primate": "^0.13.1",
     "runtime-compat": "^0.14.1"
   },
   "devDependencies": {

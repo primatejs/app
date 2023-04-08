@@ -16,7 +16,7 @@ const Component = create_ssr_component(($$result, $$props, $$bindings, slots) =>
 ${each(posts, post => {
 		return `<h2><a href="${"/post/view/" + escape(post.id, true)}">${escape(post.title)}</a></h2>`;
 	})}
-<h3><a href="/post/edit/">add post</a></h3>`;
+<h3><a href="/add">add post</a></h3>`;
 });
 
 export default Component;
