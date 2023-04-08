@@ -1,8 +1,0 @@
-<form action="/comment/add?post_id=${comment.post._id}" method="post">
-  <h1>Comment on ${comment.post.title}</h1>
-  <p>
-  <textarea name="text">${comment.text}</textarea>
-    <div>${comment.errors.text}</div>
-  </p>
-  <input type="submit" value="Submit comment" />
-</form>

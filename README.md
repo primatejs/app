@@ -1,6 +1,6 @@
-# Primate example app
+# Primate template app
 
-This is an example application for the [Primate][primate] framework.
+This is a [Primate][primate] template app.
 
 ## How to run
 

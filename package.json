@@ -1,27 +1,20 @@
 {
   "name": "primate-app",
   "version": "0.11.0",
-  "author": "Terrablue <terrablue@proton.me>",
+  "description": "Primate template app",
   "homepage": "https://primatejs.com",
   "bugs": "https://github.com/primatejs/primate-app/issues",
-  "repository": "https://github.com/primatejs/primate-app",
-  "description": "Primate template app",
   "license": "MIT",
+  "repository": "https://github.com/primatejs/primate-app",
   "type": "module",
   "scripts": {
-    "start": "npx -y primate@latest"
+    "start": "npx -y primate"
   },
   "dependencies": {
-    "@primate/domains": "^0.1.0",
-    "@primate/html": "^0.4.0",
-    "@primate/redirect": "^0.2.0",
-    "runtime-compat": "^0.12.3"
+    "@primate/svelte": "^0.2.0",
+    "runtime-compat": "^0.14.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.21.0",
-    "@babel/eslint-parser": "^7.19.1",
-    "@babel/plugin-syntax-import-assertions": "^7.20.0",
-    "eslint": "^8.34.0",
-    "eslint-plugin-json": "^3.1.0"
+    "maximin": "^0.1.2"
   }
 }
