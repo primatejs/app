@@ -16,3 +16,13 @@
 {/each}
 <h3><a href="/add">add post</a></h3>
 <Test />
+
+<style>
+  button {
+    border-radius: 4px;
+    background-color: #5ca1e1;
+    border: none;
+    color: #fff;
+    display: block;
+  }
+</style>
