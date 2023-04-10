@@ -1,4 +1,6 @@
 <script>
+  import Test from "./Test.svelte";
+
   export let posts;
 
   let count = 0;
@@ -13,3 +15,4 @@
 <h2><a href="/post/view/{post.id}">{post.title}</a></h2>
 {/each}
 <h3><a href="/add">add post</a></h3>
+<Test />
