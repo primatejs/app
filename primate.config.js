@@ -3,8 +3,18 @@ import htmx from "@primate/htmx";
 import esbuild from "@primate/esbuild";
 import react from "@primate/react";
 import vue from "@primate/vue";
+import session from "@primate/session";
 
 export default {
+  // comment in this section and generate the files for SSL
+  /*
+  http: {
+    ssl: {
+      key: "./ssl/default.key",
+      cert: "./ssl/default.crt",
+    },
+  },
+  */
   logger: {
     traceStack: true,
   },
@@ -14,5 +24,6 @@ export default {
     react(),
     vue(),
     esbuild(),
+    session(),
   ],
 };
