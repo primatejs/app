@@ -6,7 +6,7 @@ import vue from "@primate/vue";
 import session from "@primate/session";
 
 export default {
-  // comment in this section and generate the files for SSL
+  // comment in this section and run `npm run generate-ssl` for https
   /*
   http: {
     ssl: {
