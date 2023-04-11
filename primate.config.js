@@ -2,6 +2,7 @@ import svelte from "@primate/svelte";
 import htmx from "@primate/htmx";
 import esbuild from "@primate/esbuild";
 import react from "@primate/react";
+import vue from "@primate/vue";
 
 export default {
   logger: {
@@ -11,6 +12,7 @@ export default {
     svelte({entryPoints: ["PostIndex.svelte"]}),
     htmx(),
     react(),
+    vue(),
     esbuild(),
   ],
 };
