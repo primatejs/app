@@ -1,13 +1,11 @@
 {
   "name": "@primate/app",
-  "private": true,
-  "version": "0.15.5",
+  "version": "0.15.6",
   "description": "Primate template app",
   "homepage": "https://primatejs.com",
-  "bugs": "https://github.com/primatejs/primate-app/issues",
+  "bugs": "https://github.com/primatejs/app/issues",
   "license": "MIT",
-  "repository": "https://github.com/primatejs/primate-app",
-  "type": "module",
+  "repository": "https://github.com/primatejs/app",
   "scripts": {
     "start": "npx primate",
     "dev": "npx primate dev",
@@ -25,5 +23,7 @@
   },
   "devDependencies": {
     "maximin": "^0.1.2"
-  }
+  },
+  "type": "module",
+  "private": true
 }
