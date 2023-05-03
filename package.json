@@ -13,15 +13,15 @@
     "generate-ssl": "scripts/generate-ssl.sh ssl"
   },
   "dependencies": {
-    "@primate/esbuild": "^0.2.0",
-    "@primate/htmx": "^0.9.0",
-    "@primate/react": "^0.2.4",
-    "@primate/session": "^0.2.0",
-    "@primate/svelte": "^0.6.0",
-    "@primate/vue": "^0.1.0",
-    "primate": "^0.15.7",
-    "react": "^18.2.0",
-    "runtime-compat": "^0.15.1"
+    "@primate/esbuild": "^0.4.0",
+    "@primate/htmx": "^0.12.0",
+    "@primate/react": "^0.4.0",
+    "@primate/session": "^0.4.0",
+    "@primate/store": "^0.2.0",
+    "@primate/svelte": "^0.8.0",
+    "@primate/vue": "^0.3.0",
+    "primate": "^0.17.0",
+    "runtime-compat": "^0.16.3"
   },
   "devDependencies": {
     "maximin": "^0.1.2"

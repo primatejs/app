@@ -4,6 +4,7 @@ import esbuild from "@primate/esbuild";
 import react from "@primate/react";
 import vue from "@primate/vue";
 import session from "@primate/session";
+import {default as store, json} from "@primate/store";
 
 export default {
   // comment in this section and run `npm run generate-ssl` for https
@@ -16,7 +17,7 @@ export default {
   },
   */
   logger: {
-    traceStack: true,
+    trace: true,
   },
   modules: [
     svelte({entryPoints: ["PostIndex.svelte"]}),
@@ -24,6 +25,11 @@ export default {
     react(),
     vue(),
     esbuild(),
+    store({validate: false, driver: json("/tmp/db.json")}),
     session(),
+    {name: "ad-hoc", load(app) {
+      console.log(`ad-hoc module loaded, app port: ${app.config.http.port}`);
+    },
+    },
   ],
 };
