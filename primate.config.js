@@ -25,7 +25,7 @@ export default {
     react(),
     vue(),
     esbuild(),
-    store({validate: false, driver: json("/tmp/db.json")}),
+    store({driver: json("/tmp/db.json")}),
     session(),
     {name: "ad-hoc", load(app) {
       console.log(`ad-hoc module loaded, app port: ${app.config.http.port}`);
