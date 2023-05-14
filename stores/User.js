@@ -1,6 +1,7 @@
 export default {
+  id: String,
   name: String,
   google_id: String,
-  email: Number,
+  email: String,
   created: Date,
 };

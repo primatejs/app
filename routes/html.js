@@ -5,4 +5,3 @@ export default {
     return view("post-add.html");
   },
 };
-
