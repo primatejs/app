@@ -4,7 +4,9 @@ import esbuild from "@primate/esbuild";
 import react from "@primate/react";
 import vue from "@primate/vue";
 import session from "@primate/session";
+import ws from "@primate/ws";
 import {default as store, json} from "@primate/store";
+import {Logger} from "primate";
 
 export default {
   // comment in this section and run `npm run generate-ssl` for https
@@ -17,7 +19,7 @@ export default {
   },
   */
   logger: {
-    trace: true,
+    level: Logger.Info,
   },
   modules: [
     svelte({entryPoints: ["PostIndex.svelte"]}),
@@ -27,5 +29,6 @@ export default {
     esbuild(),
     store({driver: json({path: "/tmp/db.json"})}),
     session(),
+    ws(),
   ],
 };

@@ -20,7 +20,8 @@
     "@primate/store": "^0.3.1",
     "@primate/svelte": "^0.9.1",
     "@primate/vue": "^0.4.0",
-    "primate": "^0.18.0",
+    "@primate/ws": "file:../primate/packages/ws",
+    "primate": "file:../primate/packages/primate",
     "runtime-compat": "^0.17.0"
   },
   "devDependencies": {
