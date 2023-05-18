@@ -5,6 +5,7 @@ import react from "@primate/react";
 import vue from "@primate/vue";
 import session from "@primate/session";
 import ws from "@primate/ws";
+import guard from "@primate/guard";
 import {default as store, json} from "@primate/store";
 import {Logger} from "primate";
 
@@ -30,5 +31,6 @@ export default {
     store({driver: json({path: "/tmp/db.json"})}),
     session(),
     ws(),
+    guard(),
   ],
 };

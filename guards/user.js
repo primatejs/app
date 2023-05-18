@@ -1,7 +1,7 @@
 import {redirect} from "primate";
 
 export default request => {
-  if (request.session.loggedIn) {
+  if (request.session.get().loggedIn) {
     return true;
   }
 
