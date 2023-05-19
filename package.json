@@ -8,7 +8,6 @@
   "repository": "https://github.com/primatejs/app",
   "scripts": {
     "start": "npx primate",
-    "dev": "npx primate dev",
     "serve": "npx primate serve",
     "generate-ssl": "scripts/generate-ssl.sh ssl"
   },
