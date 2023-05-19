@@ -7,6 +7,7 @@ import session from "@primate/session";
 import ws from "@primate/ws";
 import guard from "@primate/guard";
 import {default as store, json} from "@primate/store";
+import types from "@primate/types";
 import {Logger} from "primate";
 
 export default {
@@ -21,6 +22,7 @@ export default {
   */
   logger: {
     level: Logger.Info,
+    trace: true,
   },
   modules: [
     svelte({entryPoints: ["PostIndex.svelte"]}),
@@ -28,6 +30,7 @@ export default {
     react(),
     vue(),
     esbuild(),
+    types(),
     store({driver: json({path: "/tmp/db.json"})}),
     session(),
     ws(),
