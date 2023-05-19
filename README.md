@@ -1,15 +1,23 @@
 # Primate template app
 
-This is a [Primate][primate] template app. You're on a preview branch which
-uses features from the upcoming 0.19 version. To use them, you would need to
-clone the Primate repository and place it on the same level as this repository.
+This is a [Primate][primate] template app.
 
-## How to run
+## Install
 
-Clone the [Primate monorepo][primate] repository, for example onto `primate`.
-Clone this repository onto `app` alongside the Primate repository.
+Clone the [Primate monorepo][primate] repository.
 
-Run `npm i && npx -y primate`.
+Run `npm install` to install dependencies.
+
+## Run
+
+### Development
+
+Run `npm start` to start the server in development mode, disabling bundling.
+
+### Productoin
+
+Run `npm run serve` to start the server in production mode with bundling
+enabled.
 
 ## License
 
