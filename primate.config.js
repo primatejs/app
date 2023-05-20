@@ -7,6 +7,7 @@ import session from "@primate/session";
 import ws from "@primate/ws";
 import guard from "@primate/guard";
 import {default as store, json} from "@primate/store";
+import surrealdb from "@primate/surrealdb";
 import types from "@primate/types";
 import {Logger} from "primate";
 
@@ -25,13 +26,15 @@ export default {
     trace: true,
   },
   modules: [
-    svelte({entryPoints: ["PostIndex.svelte"]}),
+    svelte({entryPoints: ["PostIndex.svelte", "Recipe.svelte"]}),
     htmx(),
     react(),
     vue(),
     esbuild(),
     types(),
-    store({driver: json({path: "/tmp/db.json"})}),
+    store({driver: json({path: "./data/db.json"})}),
+    // comment in to use surrealdb, fill in user and pass
+    /*store({driver: surrealdb({user: "", pass: ""})}),*/
     session(),
     ws(),
     guard(),
