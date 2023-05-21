@@ -24,7 +24,7 @@
     "@primate/vue": "^0.5.0",
     "@primate/ws": "^0.1.0",
     "primate": "^0.19.4",
-    "runtime-compat": "^0.17.2"
+    "runtime-compat": "^0.18.0"
   },
   "devDependencies": {
     "maximin": "^0.1.2"
