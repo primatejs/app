@@ -4,9 +4,9 @@ This is a [Primate][primate] template app.
 
 ## Install
 
-Clone the [Primate monorepo][primate] repository.
+Clone this repository and run `npm install`.
 
-Run `npm install` to install dependencies.
+`git clone https://github.com/primatejs/app && cd app && npm install`
 
 ## Run
 
@@ -14,7 +14,7 @@ Run `npm install` to install dependencies.
 
 Run `npm start` to start the server in development mode, disabling bundling.
 
-### Productoin
+### Production
 
 Run `npm run serve` to start the server in production mode with bundling
 enabled.
