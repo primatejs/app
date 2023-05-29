@@ -57,7 +57,7 @@ export default {
     /* frontend frameworks {{{ */
     react(),
     vue(),
-    svelte({entryPoints: ["PostIndex.svelte", "Recipe.svelte", "Form.svelte"]}),
+    svelte({entryPoints: ["PostIndex.svelte"]}),
     htmx(),
     /* }}} */
     /* bundler {{{ */
