@@ -12,22 +12,21 @@
     "generate-ssl": "scripts/generate-ssl.sh ssl"
   },
   "dependencies": {
-    "@primate/esbuild": "^0.6.1",
-    "@primate/guard": "^0.2.1",
-    "@primate/htmx": "^0.14.0",
-    "@primate/react": "^0.6.0",
-    "@primate/session": "^0.7.0",
-    "@primate/store": "^0.7.0",
-    "@primate/surrealdb": "^0.1.1",
-    "@primate/svelte": "^0.10.0",
-    "@primate/types": "^0.3.0",
-    "@primate/vue": "^0.5.0",
-    "@primate/ws": "^0.1.0",
-    "primate": "^0.19.4",
-    "runtime-compat": "^0.19.1"
+    "@primate/esbuild": "^0.7.0",
+    "@primate/htmx": "^0.15.0",
+    "@primate/react": "^0.7.0",
+    "@primate/session": "^0.8.0",
+    "@primate/store": "^0.8.1",
+    "@primate/surrealdb": "^0.2.0",
+    "@primate/svelte": "^0.11.1",
+    "@primate/types": "^0.4.0",
+    "@primate/vue": "^0.6.0",
+    "@primate/ws": "^0.2.1",
+    "primate": "^0.20.1",
+    "runtime-compat": "^0.20.2"
   },
   "devDependencies": {
-    "maximin": "^0.1.2"
+    "maximin": "^0.1.4"
   },
   "type": "module",
   "private": true

@@ -1,8 +1,8 @@
 export default {
   async get(request) {
     const {session} = request;
-    await session.create({loggedIn: true});
+    session.set("test", {some: "value"});
 
-    return session.id;
+    return "hi";
   },
 };

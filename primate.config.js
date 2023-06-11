@@ -49,7 +49,12 @@ export default {
     level: Logger.Info,
 
     /* comment in for stack traces on errors and warnings */
-    // trace: true,
+    trace: true,
+  },
+  /* }}} */
+  /* build {{{ */
+  build: {
+    includes: ["services"],
   },
   /* }}} */
   /* modules {{{ */
@@ -57,7 +62,7 @@ export default {
     /* frontend frameworks {{{ */
     react(),
     vue(),
-    svelte({entryPoints: ["PostIndex.svelte"]}),
+    svelte(),
     htmx(),
     /* }}} */
     /* bundler {{{ */

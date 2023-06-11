@@ -1,6 +1,5 @@
 <script>
-  import users from "../services/users.js";
-  import Test from "./Test.svelte";
+  import Test from "../Test.svelte";
 
   export let data;
 

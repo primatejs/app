@@ -7,6 +7,6 @@ const posts = [{
 
 export default {
   get() {
-    return view("test/PostIndex.svelte", {posts});
+    return view("PostIndex.svelte", {posts});
   },
 };
