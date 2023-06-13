@@ -21,7 +21,7 @@
     "@primate/svelte": "^0.11.1",
     "@primate/types": "^0.4.0",
     "@primate/vue": "^0.6.0",
-    "@primate/ws": "^0.2.1",
+    "@primate/ws": "^0.2.2",
     "primate": "^0.20.1",
     "runtime-compat": "^0.20.2"
   },
