@@ -1,6 +1,6 @@
 {
   "name": "@primate/app",
-  "version": "0.20.1",
+  "version": "0.20.2",
   "description": "Primate template app",
   "homepage": "https://primatejs.com",
   "bugs": "https://github.com/primatejs/app/issues",
@@ -22,7 +22,7 @@
     "@primate/types": "^0.4.0",
     "@primate/vue": "^0.6.0",
     "@primate/ws": "^0.2.2",
-    "primate": "^0.20.1",
+    "primate": "^0.20.2",
     "runtime-compat": "^0.20.2"
   },
   "devDependencies": {
