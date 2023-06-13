@@ -4,4 +4,4 @@ package-lock.json
 ssl
 *.lock
 *.log
-*output
+.env
