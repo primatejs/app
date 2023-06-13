@@ -48,8 +48,8 @@ export default {
      */
     level: Logger.Info,
 
-    /* comment in for stack traces on errors and warnings */
-    trace: true,
+    /* comment in for stack traces on errors */
+    // trace: true,
   },
   /* }}} */
   /* build {{{ */
@@ -84,13 +84,14 @@ export default {
 
     /*
      * JSON file database
+     * comment in driver import, line 25
      * make sure /tmp is writable or change to a directory of your choice
      */
     // store({driver: json({path: "/tmp/db.json"})}),
 
     /*
      * SurrealDB (experimental)
-     * comment in driver import, line 9
+     * comment in driver import, line 26
      * install SurrealDB first at https://surrealdb.com/install
      * fill in user and pass
      */
