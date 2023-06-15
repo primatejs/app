@@ -18,7 +18,7 @@
     "@primate/session": "^0.8.0",
     "@primate/store": "^0.8.1",
     "@primate/surrealdb": "^0.2.0",
-    "@primate/svelte": "^0.11.1",
+    "@primate/svelte": "^0.11.2",
     "@primate/types": "^0.4.0",
     "@primate/vue": "^0.6.0",
     "@primate/ws": "^0.2.2",
