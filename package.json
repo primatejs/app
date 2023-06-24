@@ -22,7 +22,7 @@
     "@primate/types": "^0.4.0",
     "@primate/vue": "^0.6.0",
     "@primate/ws": "^0.2.2",
-    "primate": "^0.20.4",
+    "primate": "^0.20.5",
     "runtime-compat": "^0.21.0"
   },
   "devDependencies": {
