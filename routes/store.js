@@ -1,6 +1,5 @@
 export default {
-  async get({guard, store}) {
-//    guard.user();
+  async get({store}) {
     const {User} = store;
     await User.delete();
     const user = await User.insert({date: new Date(), age: 200});

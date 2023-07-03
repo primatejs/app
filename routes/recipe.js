@@ -7,7 +7,6 @@ export default {
     return view("Recipe.svelte", {test: 1});
   },
   async post(request) {
-    console.log("HI");
     const body = request.body.get();
     try {
       return (await fetch(`${host}/v1/chat/completions`, {
@@ -15,8 +14,8 @@ export default {
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(body),
       })).json();
-    } catch (error) {
-      return error("error querying localai backend");
+    } catch (_) {
+      return error("error querying local AI backend");
     }
   },
 };
