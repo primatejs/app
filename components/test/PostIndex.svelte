@@ -14,7 +14,13 @@
 {#each data.posts as post}
 <h2><a href="/post/view/{post.id}">{post.title}</a></h2>
 {/each}
-<h3><a href="/add">add post</a></h3>
+<h3>Add post</h3>
+<form method="post">
+  <div><label for="title">Title</label></div>
+  <div><input id="title" name="title" /></div>
+  <div><button type="submit">Add post</button></div>
+  <div>{data.errors !== undefined ? data.errors.title : ""}</div>
+</form>
 <Test />
 
 <style>

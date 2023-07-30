@@ -1,5 +1,5 @@
 <h1>Add post</h1>
-<form hx-post="/htmx" hx-wrap="outerHTML">
+<form action="post" hx-post="/htmx" hx-wrap="outerHTML">
   <p>
     <div><label>Title</label></div>
     <input name="title" />

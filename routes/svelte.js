@@ -1,12 +1,19 @@
 import {view} from "primate";
 
-const posts = [{
-  id: 1,
-  title: "First post",
-}];
+const form = data => view("test/PostIndex.svelte", data);
 
 export default {
-  get() {
-    return view("test/PostIndex.svelte", {posts});
+  async get(request) {
+    return form({posts: await request.store.Post.find()});
+  },
+  async post(request) {
+    const {Post} = request.store;
+
+    try {
+      await Post.insert(request.body.get());
+      return form({posts: await Post.find()});
+    } catch ({errors}) {
+      return form({posts: await Post.find(), errors});
+    }
   },
 };

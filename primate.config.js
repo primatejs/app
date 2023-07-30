@@ -1,33 +1,33 @@
 import {Logger} from "primate";
-/* environment variables {{{ */
-
+// environment variables {{{
 /*
  * env loads variables from .env, overridable by .local.env
  * to distinguish between environments, use JS_ENV
  * `JS_ENV=test` will load from .env.local.test, otherwise from .env.test
  */
 // import env from "runtime-compat/env";
-/* }}} */
-/* bundler {{{ */
+// }}}
+// bundler {{{
 import esbuild from "@primate/esbuild";
-/* }}} */
+// }}}
+import liveview from "@primate/liveview";
 import session from "@primate/session";
 import ws from "@primate/ws";
-import store from "@primate/store";
 import types from "@primate/types";
-/* frontend frameworks {{{ */
+import store from "@primate/store";
+// frontend frameworks {{{
 import react from "@primate/react";
 import vue from "@primate/vue";
 import svelte from "@primate/svelte";
 import htmx from "@primate/htmx";
-/* }}} */
-/* database drivers {{{ */
+// }}}
+// database drivers {{{
 // import {json} from "@primate/store";
-// import surrealdb from "@primate/surrealdb";
-/* }}} */
-
+// import {surrealdb} from "@primate/store";
+// import {sqlite} from "@primate/store";
+// }}}
 export default {
-  /* HTTP server {{{ */
+  // HTTP server {{{
   http: {
     /*
      * comment in this section and run `npm run generate-ssl` for secure HTTP
@@ -38,8 +38,8 @@ export default {
       cert: "./ssl/default.crt",
     },*/
   },
-  /* }}} */
-  /* logging {{{ */
+  // }}}
+  // logging {{{
   logger: {
     /*
      * change to
@@ -48,33 +48,34 @@ export default {
      */
     level: Logger.Info,
 
-    /* comment in for stack traces on errors */
-    // trace: true,
+    // comment in for stack traces on errors
+    trace: true,
   },
-  /* }}} */
-  /* build {{{ */
+  // }}}
+  // build {{{
   build: {
     includes: ["services"],
   },
-  /* }}} */
-  /* modules {{{ */
+  // }}}
+  // modules {{{
   modules: [
-    /* frontend frameworks {{{ */
+    // frontend frameworks {{{
     react(),
     vue(),
     svelte(),
+
     htmx(),
-    /* }}} */
-    /* bundler {{{ */
+    // }}}
+    // bundler {{{
 
     /*
      * run `npm run serve` to run in production mode, activating bundling
      * in dev mode (`npm start`) the bundler is a no-op
      */
     esbuild(),
-    /* }}} */
+    // }}}
     types(),
-    /* databases {{{ */
+    // databases {{{
 
     /*
      * volatile, per app run, in-memory database
@@ -87,7 +88,7 @@ export default {
      * comment in driver import, line 25
      * make sure /tmp is writable or change to a directory of your choice
      */
-    // store({driver: json({path: "/tmp/db.json"})}),
+    // store({driver: json({filename: "/tmp/db.json"})}),
 
     /*
      * SurrealDB (experimental)
@@ -95,11 +96,19 @@ export default {
      * install SurrealDB first at https://surrealdb.com/install
      * fill in user and pass
      */
-    // store({driver: surrealdb({user: "", pass: ""})}),*/
+    // store({driver: surrealdb({user: "", pass: ""})}),
 
-    /* }}} */
+    /*
+     * SQLite
+     * comment in driver import, line 27
+     *
+     */
+    // store({driver: sqlite({filename: "tmp/app.db"})}),
+
+    // }}}
     session(),
     ws(),
+    liveview(),
   ],
-  /* }}} */
+  // }}}
 };
