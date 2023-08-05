@@ -21,6 +21,7 @@
   <div><button type="submit">Add post</button></div>
   <div>{data.errors !== undefined ? data.errors.title : ""}</div>
 </form>
+<a href="/svelte/test">click me</a>
 <Test />
 
 <style>
