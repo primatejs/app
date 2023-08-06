@@ -49,7 +49,7 @@ export default {
     level: Logger.Info,
 
     // comment in for stack traces on errors
-    trace: true,
+    // trace: true,
   },
   // }}}
   // build {{{
