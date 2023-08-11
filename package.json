@@ -15,7 +15,7 @@
     "@primate/esbuild": "^0.8.0",
     "@primate/htmx": "^0.16.0",
     "@primate/liveview": "^0.3.3",
-    "@primate/react": "^0.8.0",
+    "@primate/react": "^0.8.1",
     "@primate/session": "^0.9.0",
     "@primate/store": "^0.11.0",
     "@primate/svelte": "^0.15.2",
