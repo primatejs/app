@@ -17,6 +17,7 @@ import types from "@primate/types";
 import store from "@primate/store";
 // frontend frameworks {{{
 import react from "@primate/react";
+import solid from "@primate/solid";
 import vue from "@primate/vue";
 import svelte from "@primate/svelte";
 import htmx from "@primate/htmx";
@@ -61,9 +62,9 @@ export default {
   modules: [
     // frontend frameworks {{{
     react(),
+    solid({extension: "solid"}),
     vue(),
     svelte(),
-
     htmx(),
     // }}}
     // bundler {{{

@@ -1,0 +1,7 @@
+export default function layout(props) {
+  return <>
+    T{props.data.hello}T
+    This is a layout
+    {props.children}
+  </>;
+}

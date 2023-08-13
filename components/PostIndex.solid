@@ -1,0 +1,13 @@
+import {For} from "solid-js/web";
+import Test from "./Test.solid";
+
+export default function (props) {
+  return <>
+    <h1 onClick={() => {console.log("HI!")}}>All posts</h1>
+    <For each={props.data.posts}>
+      {(post) => <h2><a href={`/solid/post/view/${post.id}`}>{post.title}</a></h2>}
+    </For>
+    <Test />
+    <h3><a href="/solid/post/edit/">add post</a></h3>
+  </>;
+}
