@@ -1,22 +1,18 @@
-/*export default class extends React.Component {
-  render() {
-    const {posts} = this.props.data;
+import Head from "./Head.jsx";
+import {useState} from "react";
 
-    return (<>
-      <h1 onClick={() => {console.log("HI!")}}>All posts</h1>
-      {posts.map(({id, title}) => (
-        <h2><a href={`/react/post/view/${id}`}>{title}</a></h2>
-      ))}
-      <h3><a href="/react/post/edit/">add post</a></h3>
-    </>);
-  }
-}*/
+export default function ({data: {posts, title}}) {
+  const [a, setA] = useState(false);
 
-export default ({data: {posts}}) =>
-  (<>
+  return <>
     <h1 onClick={() => {console.log("HI!")}}>All posts</h1>
-    {posts.map(({id, title}) => (
+    <Head>
+      <title>hi2App template app</title>
+      <meta keywords={title} />
+    </Head>
+    {posts.map(({id, title}) =>
       <h2><a href={`/react/post/view/${id}`}>{title}</a></h2>
-    ))}
+    )}
     <h3><a href="/react/post/edit/">add post</a></h3>
-  </>);
+  </>;
+};

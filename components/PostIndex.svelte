@@ -22,6 +22,9 @@
   <div><button type="submit" value="Add post" /></div>
 </form>
 <Test />
+<svelte:head>
+  <meta name="viewport" content="" />
+</svelte:head>
 
 <style>
   button {

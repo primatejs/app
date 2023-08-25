@@ -23,6 +23,9 @@
 </form>
 <a href="/svelte/test">click me</a>
 <Test />
+<svelte:head>
+  <meta name="viewport" content="" />
+</svelte:head>
 
 <style>
   button {

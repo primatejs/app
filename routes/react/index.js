@@ -7,6 +7,6 @@ const posts = [{
 
 export default {
   get() {
-    return view("PostIndex.jsx", {posts});
+    return view("PostIndex.jsx", {posts, title: "Hi title"});
   },
 };

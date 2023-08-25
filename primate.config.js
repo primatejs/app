@@ -21,11 +21,12 @@ import solid from "@primate/solid";
 import vue from "@primate/vue";
 import svelte from "@primate/svelte";
 import htmx from "@primate/htmx";
+import markdown from "@primate/markdown";
 // }}}
 // database drivers {{{
-// import {json} from "@primate/store";
-// import {surrealdb} from "@primate/store";
-// import {sqlite} from "@primate/store";
+import {json} from "@primate/store";
+import {surrealdb} from "@primate/store";
+import {sqlite} from "@primate/store";
 // }}}
 export default {
   // HTTP server {{{
@@ -66,45 +67,32 @@ export default {
     vue(),
     svelte(),
     htmx(),
+    markdown({directory: "content"}),
     // }}}
     // bundler {{{
 
-    /*
-     * run `npm run serve` to run in production mode, activating bundling
-     * in dev mode (`npm start`) the bundler is a no-op
-     */
+    // run `npm run serve` to run in production mode, activating bundling
+    // in dev mode (`npm start`) the bundler is a no-op
     esbuild(),
     // }}}
     types(),
     // databases {{{
 
-    /*
-     * volatile, per app run, in-memory database
-     * comment out and comment in any other option below for other databases
-     */
+    // volatile, per app run, in-memory database
+    // comment out and comment in any other option below for other databases
     store(),
 
-    /*
-     * JSON file database
-     * comment in driver import, line 25
-     * make sure /tmp is writable or change to a directory of your choice
-     */
+    // JSON file database
+    // make sure /tmp is writable or change to a directory of your choice
     // store({driver: json({filename: "/tmp/db.json"})}),
 
-    /*
-     * SurrealDB (experimental)
-     * comment in driver import, line 26
-     * install SurrealDB first at https://surrealdb.com/install
-     * fill in user and pass
-     */
+    // SurrealDB
+    // install SurrealDB first at https://surrealdb.com/install
+    // fill in user and pass
     // store({driver: surrealdb({user: "", pass: ""})}),
 
-    /*
-     * SQLite
-     * comment in driver import, line 27
-     *
-     */
-    // store({driver: sqlite({filename: "tmp/app.db"})}),
+    // SQLite
+    // store({driver: sqlite()}),
 
     // }}}
     session(),

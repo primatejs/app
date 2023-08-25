@@ -1,6 +1,6 @@
 {
   "name": "@primate/app",
-  "version": "0.21.0",
+  "version": "0.22.0",
   "description": "Primate template app",
   "homepage": "https://primatejs.com",
   "bugs": "https://github.com/primatejs/app/issues",
@@ -12,19 +12,20 @@
     "generate-ssl": "scripts/generate-ssl.sh ssl"
   },
   "dependencies": {
-    "@primate/esbuild": "^0.8.1",
-    "@primate/htmx": "^0.16.0",
-    "@primate/liveview": "^0.3.5",
-    "@primate/react": "^0.9.3",
-    "@primate/session": "^0.9.0",
-    "@primate/solid": "^0.1.0",
-    "@primate/store": "^0.11.0",
-    "@primate/svelte": "^0.15.3",
-    "@primate/types": "^0.5.0",
-    "@primate/vue": "^0.7.0",
-    "@primate/ws": "^0.3.0",
-    "better-sqlite3": "^8.5.0",
-    "primate": "^0.21.4"
+    "@primate/esbuild": "^0.9.3",
+    "@primate/htmx": "^0.17.0",
+    "@primate/liveview": "^0.4.0",
+    "@primate/markdown": "^0.2.0",
+    "@primate/react": "^0.10.0",
+    "@primate/session": "^0.10.0",
+    "@primate/solid": "^0.2.0",
+    "@primate/store": "^0.12.3",
+    "@primate/svelte": "^0.16.0",
+    "@primate/types": "^0.6.0",
+    "@primate/vue": "^0.8.0",
+    "@primate/ws": "^0.4.0",
+    "better-sqlite3": "^8.5.2",
+    "primate": "^0.22.3"
   },
   "devDependencies": {
     "maximin": "^0.1.5"
