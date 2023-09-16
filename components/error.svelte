@@ -1,1 +1,1 @@
-This is an error page.
+This is an error page. %token%

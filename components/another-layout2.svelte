@@ -1,8 +1,8 @@
 <script>
-  export let data;
+  export let hello;
 </script>
 <div>
-  {data.hello}
+  {hello}
   This is another layout 2
   <slot></slot>
 </div>

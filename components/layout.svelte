@@ -1,8 +1,8 @@
 <script>
-  export let data;
+  export let hello;
 </script>
 <div>
-  T{data.hello}T
+  T{hello}T
   This is a layout
   <slot></slot>
 </div>

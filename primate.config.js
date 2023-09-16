@@ -16,17 +16,14 @@ import ws from "@primate/ws";
 import types from "@primate/types";
 import store from "@primate/store";
 // frontend frameworks {{{
-import react from "@primate/react";
-import solid from "@primate/solid";
-import vue from "@primate/vue";
-import svelte from "@primate/svelte";
-import htmx from "@primate/htmx";
-import markdown from "@primate/markdown";
+import {htmx, markdown, react, solid, svelte, vue, handlebars}
+  from "@primate/frontend";
+// }}}
 // }}}
 // database drivers {{{
-import {json} from "@primate/store";
-import {surrealdb} from "@primate/store";
-import {sqlite} from "@primate/store";
+//import {json} from "@primate/store";
+//import {surrealdb} from "@primate/store";
+//import {sqlite} from "@primate/store";
 // }}}
 export default {
   // HTTP server {{{
@@ -51,11 +48,15 @@ export default {
     level: Logger.Info,
 
     // comment in for stack traces on errors
-    // trace: true,
+    trace: true,
   },
   // }}}
   // build {{{
   build: {
+    transform: {
+      paths: ["pages/app.html", "static/manifest.json", "components/**/*.svelte"],
+      mapper: contents => contents.replace("<title>", "<title>hi").replace("%token%", "BLUH"),
+    },
     includes: ["services"],
   },
   // }}}
@@ -66,8 +67,9 @@ export default {
     solid({extension: "solid"}),
     vue(),
     svelte(),
-    htmx(),
+    //htmx(),
     markdown({directory: "content"}),
+    handlebars(),
     // }}}
     // bundler {{{
 
@@ -92,7 +94,7 @@ export default {
     // store({driver: surrealdb({user: "", pass: ""})}),
 
     // SQLite
-    // store({driver: sqlite()}),
+    // store({driver: sqlite({filename: ":memory:"})}),
 
     // }}}
     session(),

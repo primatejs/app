@@ -1,11 +1,11 @@
 <script>
-  export let data;
+  export let hello;
 </script>
 <svelte:head>
   <meta name="viewport" content="test" />
 </svelte:head>
 <div>
-  {data.hello}
+  {hello}
   This is another layout
   <slot></slot>
 </div>

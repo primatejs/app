@@ -1,9 +1,7 @@
-export default function Layout({children, data}) {
-  const {hello} = data;
-
+export default function Layout(props) {
   return <div>
-    T{hello}T
+    <h2>{props.hello}</h2>
     This is a inner layout
-    {children}
+    {props.children}
     </div>;
 }

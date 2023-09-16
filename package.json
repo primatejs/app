@@ -1,6 +1,6 @@
 {
   "name": "@primate/app",
-  "version": "0.22.0",
+  "version": "0.23.0",
   "description": "Primate template app",
   "homepage": "https://primatejs.com",
   "bugs": "https://github.com/primatejs/app/issues",
@@ -12,23 +12,27 @@
     "generate-ssl": "scripts/generate-ssl.sh ssl"
   },
   "dependencies": {
-    "@primate/esbuild": "^0.9.3",
-    "@primate/htmx": "^0.17.0",
-    "@primate/liveview": "^0.4.0",
-    "@primate/markdown": "^0.2.0",
-    "@primate/react": "^0.10.0",
-    "@primate/session": "^0.10.0",
-    "@primate/solid": "^0.2.0",
-    "@primate/store": "^0.12.3",
-    "@primate/svelte": "^0.16.0",
-    "@primate/types": "^0.6.0",
-    "@primate/vue": "^0.8.0",
-    "@primate/ws": "^0.4.0",
-    "better-sqlite3": "^8.5.2",
-    "primate": "^0.22.3"
+    "@primate/esbuild": "^0.11.0",
+    "@primate/frontend": "^0.3.2",
+    "@primate/liveview": "^0.5.0",
+    "@primate/session": "^0.11.0",
+    "@primate/store": "^0.13.0",
+    "@primate/types": "^0.7.0",
+    "@primate/ws": "^0.5.0",
+    "babel-preset-solid": "^1.7.7",
+    "handlebars": "^4.7.8",
+    "htmx.org": "^1.9.5",
+    "marked": "^9.0.1",
+    "primate": "^0.23.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "runtime-compat": "^0.27.1",
+    "solid-js": "^1.7.11",
+    "svelte": "^4.2.0",
+    "vue": "^3.3.4"
   },
   "devDependencies": {
-    "maximin": "^0.1.5"
+    "maximin": "^0.1.8"
   },
   "type": "module",
   "private": true

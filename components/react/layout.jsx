@@ -1,9 +1,9 @@
-export default function Layout({children, data}) {
-  const {hello} = data;
+export default function Layout(props) {
+  console.log(props.hello);
 
   return <div>
-    T{hello}T
+    T{props.hello}T
     This is a layout
-    {children}
+    {props.children}
     </div>;
 }
