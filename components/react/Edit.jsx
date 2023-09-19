@@ -1,7 +1,11 @@
-export default function Edit(props) {
-  return <form>
-    <input name="name"></input>
-    <input type="submit" value="submit" />
-    {props.error ? "missing data": ""}
-  </form>;
+import {ReactHead} from "@primate/frontend";
+
+export default function Edit () {
+  return <>
+      <ReactHead>
+        <title>hi3App template app</title>
+        <meta name="keywords" content="Edit" />
+      </ReactHead>
+      <div>Hi!</div>
+    </>
 }

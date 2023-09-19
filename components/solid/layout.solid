@@ -1,5 +1,14 @@
+import {SolidHead} from "@primate/frontend";
+
 export default function layout(props) {
   return <>
+    <SolidHead>
+      {
+        props.hello === "world"
+        ? <meta name="keywords" content="YO2" />
+        : <meta name="keywords" content="YO" />
+      }
+    </SolidHead>
     T{props.hello}T
     This is a layout
     {props.children}
