@@ -1,10 +1,8 @@
-import {Logger} from "primate";
+import { Logger } from "primate";
 // environment variables {{{
-/*
- * env loads variables from .env, overridable by .local.env
- * to distinguish between environments, use JS_ENV
- * `JS_ENV=test` will load from .env.local.test, otherwise from .env.test
- */
+// env loads variables from .env, overridable by .local.env
+// to distinguish between environments, use JS_ENV
+// `JS_ENV=test` will load from .env.local.test, otherwise from .env.test
 // import env from "runtime-compat/env";
 // }}}
 // bundler {{{
@@ -12,39 +10,36 @@ import esbuild from "@primate/esbuild";
 // }}}
 import liveview from "@primate/liveview";
 import session from "@primate/session";
+import i18n from "@primate/i18n";
 import ws from "@primate/ws";
 import types from "@primate/types";
 import store from "@primate/store";
 // frontend frameworks {{{
-import {htmx, markdown, react, solid, svelte, vue, handlebars}
+import { htmx, markdown, react, solid, svelte, vue, handlebars }
   from "@primate/frontend";
 // }}}
 // }}}
 // database drivers {{{
-//import {json} from "@primate/store";
-//import {surrealdb} from "@primate/store";
-//import {sqlite} from "@primate/store";
+// import {json} from "@primate/store";
+// import {surrealdb} from "@primate/store";
+// import {sqlite} from "@primate/store";
 // }}}
 export default {
   // HTTP server {{{
   http: {
-    /*
-     * comment in this section and run `npm run generate-ssl` for secure HTTP
-     */
-    /*
-    /*ssl: {
-      key: "./ssl/default.key",
-      cert: "./ssl/default.crt",
-    },*/
+    // comment in this section and run `npm run generate-ssl` for secure HTTP
+    //
+    // /*ssl: {
+    // key: "./ssl/default.key",
+    // cert: "./ssl/default.crt",
+    // },
   },
   // }}}
   // logging {{{
   logger: {
-    /*
-     * change to
-     * Logger.Warn for only showing warnings
-     * Logger.Error for only showing errors
-     */
+    // change to
+    // Logger.Warn for only showing warnings
+    // Logger.Error for only showing errors
     level: Logger.Info,
 
     // comment in for stack traces on errors
@@ -64,11 +59,11 @@ export default {
   modules: [
     // frontend frameworks {{{
     react(),
-    solid({extension: "solid"}),
+    solid({ extension: "solid" }),
     vue(),
     svelte(),
-    //htmx(),
-    markdown({directory: "content"}),
+    htmx(),
+    markdown({ directory: "content" }),
     handlebars(),
     // }}}
     // bundler {{{
@@ -98,8 +93,9 @@ export default {
 
     // }}}
     session(),
-    ws(),
+    // ws(),
     liveview(),
+    i18n(),
   ],
   // }}}
 };

@@ -1,11 +1,11 @@
-import {ReactHead} from "@primate/frontend";
+import {Head} from "@primate/frontend/react";
 
 export default function Edit () {
   return <>
-      <ReactHead>
+      <Head>
         <title>hi3App template app</title>
         <meta name="keywords" content="Edit" />
-      </ReactHead>
+      </Head>
       <div>Hi!</div>
     </>
 }

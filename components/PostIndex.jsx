@@ -1,15 +1,15 @@
 import {useState} from "react";
-import {ReactHead} from "@primate/frontend";
+import {Head} from "@primate/frontend/react";
 
 export default function ({posts, title}) {
   const [a, setA] = useState(false);
 
   return <>
     <h1 onClick={() => {console.log("HI!")}}>All posts</h1>
-    <ReactHead>
+    <Head>
       <title>hi2App template app</title>
       <meta name="keywords" content={title} />
-    </ReactHead>
+    </Head>
     {posts.map(({id, title}) =>
       <h2><a href={`/react/post/view/${id}`}>{title}</a></h2>
     )}

@@ -1,8 +1,10 @@
 <script>
   import test from "./test.js";
   import Test from "../Test.svelte";
+  import t from "@primate/i18n/svelte";
+  import {locale}  from "@primate/i18n/svelte";
 
-  export let posts, errors;
+  export let posts, errors, username;
 
   let count = 0;
 
@@ -28,6 +30,15 @@ T<test />T
 <svelte:head>
   <meta name="viewport" content="" />
 </svelte:head>
+<h1>{$t("welcome", {username})}</h1>
+
+<p>{$t("message")}<p>
+
+{$t("bye")}~
+
+<h3>{$t("switch-language")}</h3>
+<div><a on:click={() => locale.set("en-US")}>{$t("English")}</a></div>
+<div><a on:click={() => locale.set("de-DE")}>{$t("German")}</a></div>
 
 <style>
   button {

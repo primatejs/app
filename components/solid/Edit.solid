@@ -1,11 +1,11 @@
-import {SolidHead} from "@primate/frontend";
+import {Head} from "@primate/frontend/solid";
 
 export default function Edit() {
   return <>
-    <SolidHead>
+    <Head>
       <title>hi3App template app</title>
       <meta name="keywords" content="Edit" />
-    </SolidHead>
+    </Head>
     <div>Hi!</div>
   </>;
 }

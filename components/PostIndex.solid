@@ -1,14 +1,14 @@
 import {For, createComponent} from "solid-js/web";
 import Test from "./Test.solid";
-import {SolidHead} from "@primate/frontend";
+import {Head} from "@primate/frontend/solid";
 
 export default function (props) {
   return <>
     <h1 onClick={() => {console.log("HI!")}}>All posts</h1>
-    <SolidHead>
+    <Head>
       <title>hi2App template app</title>
       <meta name="keywords" content={props.title} />
-    </SolidHead>
+    </Head>
     <For each={props.posts}>
       {(post) => <h2><a href={`/solid/post/view/${post.id}`}>{post.title}</a></h2>}
     </For>
