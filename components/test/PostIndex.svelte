@@ -1,19 +1,31 @@
 <script>
+
   import test from "./test.js";
   import Test from "../Test.svelte";
   import t from "@primate/i18n/svelte";
   import {locale}  from "@primate/i18n/svelte";
+  import {getContext, onMount} from "svelte";
+  import {writable} from "svelte/store";
 
-  export let posts, errors, username;
+  export let posts, errors;
 
   let count = 0;
+
+  $: doubled = count * 2;
 
   function handleClick() {
     count = count+1;
   }
+  let username = "t2x33";
 </script>
+{$t("hi", {})};
+<a on:click={() => locale.set("en")}>english</a>
+<a on:click={() => locale.set("de")}>german</a>
+{$t("bye")};
+<div>{$t("ph", {here: $t("bye")})}</div>
 T<test />T
 <button on:click={handleClick}>count: {count}</button>
+{doubled}
 <h1>All posts</h1>
 {#each posts as post}
 <h2><a href="/post/view/{post.id}">{post.title}</a></h2>

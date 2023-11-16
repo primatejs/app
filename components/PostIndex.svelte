@@ -2,7 +2,7 @@
   import users from "../services/users.js";
   import Test from "./Test.svelte";
 
-  export let posts;
+  export let posts = [];
 
   let count = 0;
 
@@ -21,6 +21,7 @@
   <div><input id="title" /></div>
   <div><button type="submit">Add post</button></div>
 </form>
+<a href="/svelte/test">click me</a>
 <Test />
 <svelte:head>
   <meta name="viewport" content="" />

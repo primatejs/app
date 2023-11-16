@@ -2,6 +2,6 @@ build
 node_modules/
 package-lock.json
 ssl
-*.lock*
+*.lock
 *.log
 .env

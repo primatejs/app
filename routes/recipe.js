@@ -7,7 +7,7 @@ export default {
     return view("Recipe.svelte", {test: 1});
   },
   async post(request) {
-    const body = request.body.get();
+    const body = request.body.all();
     try {
       return (await fetch(`${host}/v1/chat/completions`, {
         method: "POST",

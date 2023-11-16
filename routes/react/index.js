@@ -3,7 +3,8 @@ import {view} from "primate";
 //let running = false; const a = 1000; const b = 3000;
 const posts = [{id: 1, title: "First post"}];
 export default {
-  get() {
+  get(request) {
+    console.log(request.session.all());
     return view("PostIndex.jsx", {posts, title: "Hi title"});
     /*const hi = writable({hello: "HI"});
     setTimeout(() => {

@@ -1,7 +1,8 @@
 <script>
-  export let hello;
+  export let hello, request;
 </script>
 <div>
+  {request.url.host}
   {hello}
   This is another layout 2
   <slot></slot>

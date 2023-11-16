@@ -1,4 +1,4 @@
-import {Path} from "runtime-compat/fs";
+import {Path} from "rcompat/fs";
 
 export default {
   get() {

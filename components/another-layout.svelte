@@ -1,10 +1,10 @@
 <script>
-  export let hello;
+  export let hello, request;
 </script>
 <svelte:head>
-  <meta name="viewport" content="test" />
 </svelte:head>
 <div>
+  {request.url.host}
   {hello}
   This is another layout
   <slot></slot>
