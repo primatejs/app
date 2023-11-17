@@ -1,6 +1,6 @@
 import {view} from "primate";
 
-const form = data => view("test/PostIndex.svelte", data);
+const form = data => view("svelte/PostIndex.svelte", data);
 
 export default {
   async get(request) {

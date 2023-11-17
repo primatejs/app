@@ -7,7 +7,7 @@ import { locale } from "@primate/i18n/solid";
 export default function (props) {
 
   return <>
-    <h1 onClick={() => {console.log("HI!")}}>All posts</h1>
+    <h1 onClick={() => {console.log("clicked!")}}>All posts</h1>
     <div onClick={() => locale.set("en")}>set english</div>
     <div onClick={() => locale.set("de")}>set german</div>
     <div>{t("hi")}</div>

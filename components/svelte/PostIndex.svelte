@@ -1,7 +1,5 @@
 <script>
-
-  import test from "./test.js";
-  import Test from "../Test.svelte";
+  import Inner from "./Inner.svelte";
   import t from "@primate/i18n/svelte";
   import {locale}  from "@primate/i18n/svelte";
   import {getContext, onMount} from "svelte";
@@ -23,7 +21,6 @@
 <a on:click={() => locale.set("de")}>german</a>
 {$t("bye")};
 <div>{$t("ph", {here: $t("bye")})}</div>
-T<test />T
 <button on:click={handleClick}>count: {count}</button>
 {doubled}
 <h1>All posts</h1>
@@ -38,7 +35,7 @@ T<test />T
   <div>{errors !== undefined ? errors.title : ""}</div>
 </form>
 <a href="/svelte/test">click me</a>
-<Test />
+<Inner />
 <svelte:head>
   <meta name="viewport" content="" />
 </svelte:head>

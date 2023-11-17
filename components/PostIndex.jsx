@@ -14,7 +14,7 @@ export default function ({posts, title, request}) {
     <div>{t("ph", {here: t("bye")})}</div>
     <Test />
     {request.url.host}
-    <h1 onClick={() => {console.log("HI!")}}>All posts</h1>
+    <h1 onClick={() => {console.log("clicked!")}}>All posts</h1>
     <Head>
       <title>hi2App template app</title>
       <meta name="keywords" content={title} />

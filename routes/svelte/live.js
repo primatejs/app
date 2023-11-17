@@ -7,6 +7,6 @@ export default {
   get() {
     //const hi = writable({hello: "world"});
     //setTimeout(() => { hi.set({hello: "World"}); }, 5000);
-    return view("PostIndex.svelte", {posts});
+    return view("svelte/PostIndex.svelte", {posts});
   },
 };
