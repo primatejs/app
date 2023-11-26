@@ -71,7 +71,7 @@ export default {
     }),
     markdown(),
     react(),
-    solid({extension: "solid"}),
+    solid({extension: ".solid"}),
     svelte(),
     vue(),
     handlebars(),
@@ -81,7 +81,7 @@ export default {
     go(),
     // run `npm run serve` to run in production mode, activating bundling
     // in dev mode (`npm start`) the bundler is a no-op
-    //esbuild(),
+    esbuild(),
     // }}}
     types(),
     // databases {{{

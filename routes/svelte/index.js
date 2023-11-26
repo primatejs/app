@@ -10,7 +10,7 @@ export default {
     const {Post} = request.store;
 
     try {
-      await Post.insert(request.body.all());
+      await Post.insert(request.body);
       return form({posts: await Post.find()});
     } catch ({errors}) {
       return form({posts: await Post.find(), errors});

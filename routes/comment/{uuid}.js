@@ -16,8 +16,8 @@ export default {
     Headers:
       host: ${headers.get("host")}
     Body:
-      title: ${body.get("title")}
-      text: ${body.get("text")}
+      title: ${body.title}
+      text: ${body.text}
     `;
   },
 };
