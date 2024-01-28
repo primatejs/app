@@ -10,7 +10,7 @@ import {Logger} from "primate";
 // bundler {{{
 import { esbuild } from "@primate/build";
 // }}}
-import { go, python } from "@primate/binding";
+import { go, python, typescript, ruby } from "@primate/binding";
 import liveview from "@primate/liveview";
 import session from "@primate/session";
 import i18n from "@primate/i18n";
@@ -78,11 +78,13 @@ export default {
     // }}}
     // bundler {{{
 
+    typescript(),
     go(),
     python(),
+    ruby(),
     // run `npm run serve` to run in production mode, activating bundling
     // in dev mode (`npm start`) the bundler is a no-op
-    esbuild(),
+    esbuild({}),
     // }}}
     types(),
     // databases {{{

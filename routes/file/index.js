@@ -1,7 +1,7 @@
-import {Path} from "rcompat/fs";
+import { File } from "rcompat/fs";
 
 export default {
   get() {
-    return new Path(import.meta.url).directory.join("download.txt").file;
+    return new File(import.meta.url).directory.join("download.txt");
   },
 };
