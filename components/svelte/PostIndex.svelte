@@ -5,6 +5,8 @@
   import {getContext, onMount} from "svelte";
   import {writable} from "svelte/store";
 
+  import users from "../../services/users.js";
+
   export let posts, errors;
 
   let count = 0;
