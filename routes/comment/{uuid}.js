@@ -5,7 +5,7 @@ export default {
   post(request) {
     const {path, query, cookies, headers, body} = request;
     return `
-    You've sent a PUT request with the following data:
+    You've sent a POST request with the following data:
 
     Path:
       /comment/${path.get("uuid")}
