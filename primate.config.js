@@ -11,14 +11,23 @@ import {Logger} from "primate";
 import { esbuild } from "@primate/build";
 // }}}
 import { go, python, typescript, ruby } from "@primate/binding";
-import liveview from "@primate/liveview";
 import session from "@primate/session";
 import i18n from "@primate/i18n";
-import ws from "@primate/ws";
 import types from "@primate/types";
 import store from "@primate/store";
 // frontend frameworks {{{
-import {htmx, markdown, react, solid, svelte, vue, handlebars} from "@primate/frontend";
+import {
+  htmx,
+  markdown,
+  react,
+  angular,
+  solid,
+  svelte,
+  vue,
+  handlebars,
+  webc,
+  marko,
+} from "@primate/frontend";
 // }}}
 // database drivers {{{
 import {json, sqlite, postgresql, mongodb} from "@primate/store";
@@ -71,10 +80,13 @@ export default {
     }),
     markdown(),
     react(),
+    angular(),
     solid({extension: ".solid"}),
     svelte(),
     vue(),
     handlebars(),
+    webc(),
+    marko(),
     // }}}
     // bundler {{{
 
@@ -118,8 +130,6 @@ export default {
 
     // }}}
     session(),
-    ws(),
-    liveview(),
     i18n({ locale: "en" }),
   ],
   // }}}

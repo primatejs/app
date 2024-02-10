@@ -1,8 +1,8 @@
 <script>
-  import { WebComponent } from "@primate/frontend/webc";
+  import { Component } from "@primate/frontend/webc";
   import PostLink from "./post-link.webc";
 
-  export default class extends WebComponent {
+  export default class extends Component {
     mounted(root) {
       root.querySelector("h1").addEventListener("click",
         _ => console.log("title clicked!"));

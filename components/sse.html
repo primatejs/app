@@ -1,0 +1,5 @@
+<script>
+  new EventSource("/sse").addEventListener("passed", event => {
+    console.log(`${JSON.parse(event.data)} seconds since connection opened`);
+  });
+</script>

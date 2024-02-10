@@ -2,6 +2,6 @@ import { view } from "primate";
 
 export default {
   get() {
-    return view("chat.html");
+    return view(`sse.html`);
   },
-};
+}

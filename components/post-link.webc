@@ -1,7 +1,7 @@
 <script>
-  import { WebComponent } from "@primate/frontend/webc";
+  import { Component } from "@primate/frontend/webc";
 
-  export default class extends WebComponent {
+  export default class extends Component {
     render() {
       const { post } = this.props;
       return `<h2><a href="/post/view/${post.id}">${post.title}</a></h2>`;
