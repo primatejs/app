@@ -62,7 +62,7 @@ export default {
   },
   http: {
     csp: {
-      "default-src": "*",
+      "script-src": ["'self'"],
     },
   },
   // }}}
