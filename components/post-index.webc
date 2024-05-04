@@ -2,7 +2,7 @@
   import { Component } from "@primate/frontend/webc";
   import PostLink from "./post-link.webc";
 
-  export default class extends Component {
+  export default class PostIndex extends Component {
     mounted(root) {
       root.querySelector("h1").addEventListener("click",
         _ => console.log("title clicked!"));

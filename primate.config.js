@@ -7,9 +7,6 @@ import {Logger} from "primate";
  */
 // import env from "runtime-compat/env";
 // }}}
-// bundler {{{
-import { esbuild } from "@primate/build";
-// }}}
 import { go, python, typescript, ruby } from "@primate/binding";
 import session from "@primate/session";
 import i18n from "@primate/i18n";
@@ -46,6 +43,9 @@ export default {
     /*csp: {
       "script-src": "'self' 'unsafe-inline'",
     }*/
+    csp: {
+      "script-src": ["'self'"],
+    },
   },
   // }}}
   // logging {{{
@@ -59,11 +59,6 @@ export default {
 
     // comment in for stack traces on errors
     trace: true,
-  },
-  http: {
-    csp: {
-      "script-src": ["'self'"],
-    },
   },
   // }}}
   // build {{{
@@ -94,9 +89,6 @@ export default {
     go(),
     python(),
     ruby(),
-    // run `npm run serve` to run in production mode, activating bundling
-    // in dev mode (`npm start`) the bundler is a no-op
-    esbuild({}),
     // }}}
     types(),
     // databases {{{
