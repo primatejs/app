@@ -1,9 +1,8 @@
 {
-  "welcome": "Hallo und willkommen, {username}",
-  "message": "Das ist meine Website. Mache dich hier gemütlich.",
-  "bye": "Tschüss",
-  "switch-language": "Sprache wechseln",
-  "english": "Englisch",
-  "german": "Deutsch"
+  "Switch language": "Sprache wechseln",
+  "English": "Englisch",
+  "German": "Deutsch",
+  "All posts": "Alle Beiträge",
+  "Counter": "Zähler"
 }
 

@@ -1,0 +1,8 @@
+<h1>All posts</h1>
+<% it.posts.forEach(function(post){ %>
+  <h2>
+    <a href="/post/view/<%= post.id %>">
+      <%= post.title %>
+    </a>
+  </h2>
+<% }) %>

@@ -1,4 +1,9 @@
-import {primary, boolean, date, u8, i64, string} from "@primate/types";
+import boolean from "@primate/types/boolean";
+import date from "@primate/types/date";
+import i64 from "@primate/types/i64";
+import primary from "@primate/types/primary";
+import string from "@primate/types/string";
+import u8 from "@primate/types/u8";
 
 export const actions = store => {
   return {

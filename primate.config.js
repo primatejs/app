@@ -1,128 +1,113 @@
-import {Logger} from "primate";
-// environment variables {{{
+import Logger from "primate/logger";
+
+// binding
 /*
- * env loads variables from .env, overridable by .local.env
- * to distinguish between environments, use JS_ENV
- * `JS_ENV=test` will load from .env.local.test, otherwise from .env.test
- */
-// import env from "runtime-compat/env";
-// }}}
-import { go, python, typescript, ruby } from "@primate/binding";
-import session from "@primate/session";
-import i18n from "@primate/i18n";
-import types from "@primate/types";
+*/
+import go from "@primate/binding/go";
+import python from "@primate/binding/python";
+import ruby from "@primate/binding/ruby";
+import typescript from "@primate/binding/typescript";
+
+// frontend
+import angular from "@primate/frontend/angular";
+import html from "@primate/frontend/html";
+import eta from "@primate/frontend/eta";
+import handlebars from "@primate/frontend/handlebars";
+import htmx from "@primate/frontend/htmx";
+import markdown from "@primate/frontend/markdown";
+import marko from "@primate/frontend/marko";
+import react from "@primate/frontend/react";
+import solid from "@primate/frontend/solid";
+import svelte from "@primate/frontend/svelte";
+import voby from "@primate/frontend/voby";
+import vue from "@primate/frontend/vue";
+import webc from "@primate/frontend/webc";
+
+// store
 import store from "@primate/store";
-// frontend frameworks {{{
-import {
-  htmx,
-  markdown,
-  react,
-  angular,
-  solid,
-  svelte,
-  vue,
-  handlebars,
-  webc,
-  marko,
-} from "@primate/frontend";
-// }}}
-// database drivers {{{
-import {json, sqlite, postgresql, mongodb} from "@primate/store";
-// }}}
+import json from "@primate/store/json";
+import mysql from "@primate/store/mysql";
+import postgresql from "@primate/store/postgresql";
+import sqlite from "@primate/store/sqlite";
+import surrealdb from "@primate/store/surrealdb";
+
+// misc
+import i18n from "@primate/i18n";
+import session from "@primate/session";
+import native from "@primate/native";
+
 export default {
-  // HTTP server {{{
   http: {
-    /*
-     * comment in this section and run `npm run generate-ssl` for secure HTTP
-     */
-    /*
-    /*ssl: {
-      key: "./ssl/default.key",
-      cert: "./ssl/default.crt",
-    },*/
-    /*csp: {
-      "script-src": "'self' 'unsafe-inline'",
-    }*/
-    csp: {
-      "script-src": ["'self'"],
-    },
+    // comment in this section and run `npm run generate-ssl` for secure HTTP
+    // ssl: { key: "./ssl/default.key", cert: "./ssl/default.crt" },
   },
-  // }}}
-  // logging {{{
   logger: {
-    /*
-     * change to
-     * Logger.Warn for only showing warnings
-     * Logger.Error for only showing errors
-     */
-    level: Logger.Info,
+    // Logger.Warn for warnings and errors, Logger.Error for errors only
+ //   level: Logger.Info,
 
     // comment in for stack traces on errors
     trace: true,
   },
-  // }}}
-  // build {{{
   build: {
+    // include directories in build
     includes: ["services"],
   },
-  // }}}
-  // modules {{{
   modules: [
-    // frontend frameworks {{{
-    htmx({ 
-      extensions: ["client-side-templates", "head-support"], 
-      client_side_templates: ["handlebars", "mustache"], 
+    // frontends
+    /*
+    */
+    htmx({
+      extensions: ["client-side-templates", "head-support"],
+      client_side_templates: ["handlebars", "mustache"],
     }),
+    html(),
     markdown(),
     react(),
     angular(),
-    solid({extension: ".solid"}),
+    solid({ extension: ".solid" }),
     svelte(),
     vue(),
     handlebars(),
     webc(),
     marko(),
-    // }}}
-    // bundler {{{
-
+    eta(),
+    voby(),
+    // bindings
     typescript(),
     go(),
     python(),
     ruby(),
-    // }}}
-    types(),
-    // databases {{{
-
+    // stores
     // volatile, per app run, in-memory database
     // comment out and comment in any other option below for other databases
-    // store(),
+    store(),
 
     // JSON file database
     // make sure /tmp is writable or change to a directory of your choice
-    store({driver: json({filename: "/tmp/db.json"})}),
+    //store({ driver: json({ database: "/tmp/app.json" }) }),
 
     // SurrealDB
-    // install SurrealDB first at https://surrealdb.com/install
-    // fill in user and pass
-    // store({driver: surrealdb({user: "", pass: ""})}),
+    //store({ driver: surrealdb({ username: "", password: "" })}),
 
     // SQLite
-    //store({driver: sqlite({filename: ":memory"})}),
-    //
+    //store({ driver: sqlite({ database: ":memory" })}),
+
+    // MySQL
+    //store({ driver: mysql({ username: "app", database: "app" }) }),
+
     // PostgreSQL
-    /*store({driver: postgresql({
-      user: "primate",
-      db: "primate",
-    })}),*/
+    //store({ driver: postgresql({ username: "app", database: "app" }) }),
 
     // MongoDB
-    //store({
-    //  driver: mongodb()
-    //}),
+    //store({ driver: mongodb({ database: "app" }) }),
 
-    // }}}
+    // use sessions
     session(),
-    i18n({ locale: "en" }),
+
+    // use internalization
+    i18n({ locale: "en-US" }),
+
+    // add native targets
+    native({ start: "/frontend" }),
   ],
-  // }}}
 };
