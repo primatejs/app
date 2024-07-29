@@ -5,14 +5,14 @@ import Logger from "primate/logger";
 */
 import go from "@primate/binding/go";
 import python from "@primate/binding/python";
-import ruby from "@primate/binding/ruby";
+//import ruby from "@primate/binding/ruby";
 import typescript from "@primate/binding/typescript";
 
 // frontend
 import angular from "@primate/frontend/angular";
-import html from "@primate/frontend/html";
 import eta from "@primate/frontend/eta";
 import handlebars from "@primate/frontend/handlebars";
+import html from "@primate/frontend/html";
 import htmx from "@primate/frontend/htmx";
 import markdown from "@primate/frontend/markdown";
 import marko from "@primate/frontend/marko";
@@ -27,6 +27,7 @@ import webc from "@primate/frontend/webc";
 import store from "@primate/store";
 import json from "@primate/store/json";
 import mysql from "@primate/store/mysql";
+import mongodb from "@primate/store/mongodb";
 import postgresql from "@primate/store/postgresql";
 import sqlite from "@primate/store/sqlite";
 import surrealdb from "@primate/store/surrealdb";
@@ -46,7 +47,7 @@ export default {
  //   level: Logger.Info,
 
     // comment in for stack traces on errors
-    trace: true,
+//    trace: true,
   },
   build: {
     // include directories in build
@@ -60,10 +61,10 @@ export default {
       extensions: ["client-side-templates", "head-support"],
       client_side_templates: ["handlebars", "mustache"],
     }),
-    html(),
     markdown(),
     react(),
     angular(),
+    html(),
     solid({ extension: ".solid" }),
     svelte(),
     vue(),
@@ -73,10 +74,10 @@ export default {
     eta(),
     voby(),
     // bindings
-    typescript(),
+    /*typescript(),
     go(),
     python(),
-    ruby(),
+    ruby(),*/
     // stores
     // volatile, per app run, in-memory database
     // comment out and comment in any other option below for other databases
@@ -99,7 +100,7 @@ export default {
     //store({ driver: postgresql({ username: "app", database: "app" }) }),
 
     // MongoDB
-    //store({ driver: mongodb({ database: "app" }) }),
+//    store({ driver: mongodb({ database: "app" }) }),
 
     // use sessions
     session(),
@@ -108,6 +109,6 @@ export default {
     i18n({ locale: "en-US" }),
 
     // add native targets
-    native({ start: "/frontend" }),
+    native({ start: "/" }),
   ],
 };
