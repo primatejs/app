@@ -1,4 +1,4 @@
-import view from "primate/handlers/view";
+import view from "primate/handler/view";
 import { frontends } from "./[frontend].js";
 
 export default {
