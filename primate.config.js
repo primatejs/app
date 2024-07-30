@@ -5,7 +5,7 @@ import Logger from "primate/logger";
 */
 import go from "@primate/binding/go";
 import python from "@primate/binding/python";
-//import ruby from "@primate/binding/ruby";
+import ruby from "@primate/binding/ruby";
 import typescript from "@primate/binding/typescript";
 
 // frontend

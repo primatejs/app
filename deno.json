@@ -1,0 +1,33 @@
+{
+  "imports": {
+    "primate": "./node_modules/primate",
+    "primate/logger": "./node_modules/primate",
+    "@primate/native": "./node_modules/@primate/native",
+    "@primate/session": "./node_modules/@primate/session",
+    "@primate/i18n": "./node_modules/@primate/i18n",
+    "@primate/store": "./node_modules/@primate/store",
+    "@primate/store/json": "./node_modules/@primate/store",
+    "@primate/store/mysql": "./node_modules/@primate/store",
+    "@primate/store/mongodb": "./node_modules/@primate/store",
+    "@primate/store/postgresql": "./node_modules/@primate/store",
+    "@primate/store/sqlite": "./node_modules/@primate/store",
+    "@primate/store/surrealdb": "./node_modules/@primate/store",
+    "@primate/frontend/angular": "./node_modules/@primate/frontend",
+    "@primate/frontend/eta": "./node_modules/@primate/frontend",
+    "@primate/frontend/handlebars": "./node_modules/@primate/frontend",
+    "@primate/frontend/html": "./node_modules/@primate/frontend",
+    "@primate/frontend/htmx": "./node_modules/@primate/frontend",
+    "@primate/frontend/markdown": "./node_modules/@primate/frontend",
+    "@primate/frontend/marko": "./node_modules/@primate/frontend",
+    "@primate/frontend/react": "./node_modules/@primate/frontend",
+    "@primate/frontend/solid": "./node_modules/@primate/frontend",
+    "@primate/frontend/svelte": "./node_modules/@primate/frontend",
+    "@primate/frontend/voby": "./node_modules/@primate/frontend",
+    "@primate/frontend/vue": "./node_modules/@primate/frontend",
+    "@primate/frontend/webc": "./node_modules/@primate/frontend",
+    "@primate/binding/go": "./node_modules/@primate/binding",
+    "@primate/binding/python": "./node_modules/@primate/binding",
+    "@primate/binding/ruby": "./node_modules/@primate/binding",
+    "@primate/binding/typescript": "./node_modules/@primate/binding"
+  }
+}
