@@ -1,12 +1,10 @@
-import Logger from "primate/logger";
-
 // binding
 /*
 */
-import go from "@primate/binding/go";
+/*import go from "@primate/binding/go";
 import python from "@primate/binding/python";
 import ruby from "@primate/binding/ruby";
-import typescript from "@primate/binding/typescript";
+import typescript from "@primate/binding/typescript";*/
 
 // frontend
 import angular from "@primate/frontend/angular";
@@ -26,11 +24,11 @@ import webc from "@primate/frontend/webc";
 // store
 import store from "@primate/store";
 import json from "@primate/store/json";
-import mysql from "@primate/store/mysql";
-import mongodb from "@primate/store/mongodb";
-import postgresql from "@primate/store/postgresql";
-import sqlite from "@primate/store/sqlite";
-import surrealdb from "@primate/store/surrealdb";
+import mysql from "@primate/mysql";
+import mongodb from "@primate/mongodb";
+import postgresql from "@primate/postgresql";
+import sqlite from "@primate/sqlite";
+import surrealdb from "@primate/surrealdb";
 
 // misc
 import i18n from "@primate/i18n";
@@ -43,8 +41,7 @@ export default {
     // ssl: { key: "./ssl/default.key", cert: "./ssl/default.crt" },
   },
   logger: {
-    // Logger.Warn for warnings and errors, Logger.Error for errors only
- //   level: Logger.Info,
+    // level: "info",
 
     // comment in for stack traces on errors
 //    trace: true,
@@ -74,10 +71,10 @@ export default {
     eta(),
     voby(),
     // bindings
-    /*typescript(),
+    typescript(),
     go(),
     python(),
-    ruby(),*/
+    ruby(),
     // stores
     // volatile, per app run, in-memory database
     // comment out and comment in any other option below for other databases
@@ -109,6 +106,6 @@ export default {
     i18n({ locale: "en-US" }),
 
     // add native targets
-    native({ start: "/" }),
+    native({ start: "/frontend" }),
   ],
 };
