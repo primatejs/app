@@ -1,23 +1,23 @@
 // backends
-import go from "@primate/go";
+/*import go from "@primate/go";
 import python from "@primate/python";
 import ruby from "@primate/ruby";
-import typescript from "@primate/typescript";
+import typescript from "@primate/typescript";*/
 
 // frontends
-import angular from "@primate/frontend/angular";
+import angular from "@primate/angular";
 import eta from "@primate/eta";
 import handlebars from "@primate/handlebars";
-import html from "@primate/frontend/html";
-import htmx from "@primate/frontend/htmx";
+import html from "@primate/html";
+import htmx from "@primate/htmx";
 import markdown from "@primate/markdown";
 import marko from "@primate/marko";
-import react from "@primate/frontend/react";
-import solid from "@primate/frontend/solid";
-import svelte from "@primate/frontend/svelte";
+import react from "@primate/react";
+import solid from "@primate/solid";
+import svelte from "@primate/svelte";
 import voby from "@primate/voby";
-import vue from "@primate/frontend/vue";
-import webc from "@primate/frontend/webc";
+import vue from "@primate/vue";
+import webc from "@primate/webc";
 
 // store
 import store from "@primate/store";
@@ -50,10 +50,10 @@ export default {
   },
   modules: [
     // backends
-    typescript(),
+    /*typescript(),
     go(),
     python(),
-    ruby(),
+    ruby(),*/
 
     // frontends
     htmx({

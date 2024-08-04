@@ -1,5 +1,5 @@
 <script>
-  import Component from "@primate/frontend/webc/Component";
+  import Component from "@primate/webc/Component";
 
   export default class PostLink extends Component {
     render() {
