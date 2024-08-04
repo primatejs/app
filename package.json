@@ -14,6 +14,10 @@
     "bun": "scripts/bun/dev.sh",
     "bun:serve": "scripts/bun/serve.sh",
     "bun:compile": "scripts/bun/compile.sh",
+    "bun:compile:linux-x64": "scripts/bun/compile-linux-64.sh",
+    "bun:compile:windows-x64": "scripts/bun/compile-windows-x64.sh",
+    "bun:compile:darwin-x64": "scripts/bun/compile-darwin-x64.sh",
+    "bun:compile:darwin-arm64": "scripts/bun/compile-darwin-arm64.sh",
     "deno": "scripts/deno/dev.sh",
     "deno:serve": "scripts/deno/serve.sh"
   },
