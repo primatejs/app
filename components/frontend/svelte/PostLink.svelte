@@ -1,4 +1,4 @@
 <script>
   export let post;
 </script>
-<h2><a href="/post/view/{post.id}">{post.title}</a></h2>
+<h2><a href="/svelte/post/{post.id}">{post.title}</a></h2>

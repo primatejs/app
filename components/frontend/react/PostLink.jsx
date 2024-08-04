@@ -1,2 +1,2 @@
 export default ({ post: { id, title } }) =>
-  <h2><a href={`/post/view/${id}`}>{title}</a></h2>;
+  <h2><a href={`/react/post/${id}`}>{title}</a></h2>;

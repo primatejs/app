@@ -76,26 +76,26 @@ export default {
     // stores
     // volatile, per app run, in-memory database
     // comment out and comment in any other option below for other databases
-    store(),
+    //store(),
 
     // JSON file database
     // make sure /tmp is writable or change to a directory of your choice
     //store({ driver: json({ database: "/tmp/app.json" }) }),
 
-    // SurrealDB
-    //store({ driver: surrealdb({ username: "", password: "" })}),
-
-    // SQLite
-    //store({ driver: sqlite({ database: ":memory" })}),
+    // MongoDB
+    //store({ driver: mongodb({ database: "app" }) }),
 
     // MySQL
-    //store({ driver: mysql({ username: "app", database: "app" }) }),
+    //store({ driver: mysql({ username: "primate", database: "primate" }) }),
 
     // PostgreSQL
-    //store({ driver: postgresql({ username: "app", database: "app" }) }),
+    //store({ driver: postgresql({ username: "primate", database: "primate" }) }),
 
-    // MongoDB
-//    store({ driver: mongodb({ database: "app" }) }),
+    // SQLite
+    store({ driver: sqlite({ database: ":memory:" })}),
+
+    // SurrealDB
+    //store({ driver: surrealdb({ username: "primate", password: "primate", database: "primate", namespace: "primate" })}),
 
     // use sessions
     session(),
@@ -104,6 +104,6 @@ export default {
     i18n({ locale: "en-US" }),
 
     // add native targets
-    native({ start: "/frontend" }),
+    native({ start: "/" }),
   ],
 };
