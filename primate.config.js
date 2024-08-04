@@ -1,23 +1,21 @@
-// binding
-/*
-*/
-/*import go from "@primate/binding/go";
-import python from "@primate/binding/python";
-import ruby from "@primate/binding/ruby";
-import typescript from "@primate/binding/typescript";*/
+// backends
+import go from "@primate/go";
+import python from "@primate/python";
+import ruby from "@primate/ruby";
+import typescript from "@primate/typescript";
 
-// frontend
+// frontends
 import angular from "@primate/frontend/angular";
-import eta from "@primate/frontend/eta";
-import handlebars from "@primate/frontend/handlebars";
+import eta from "@primate/eta";
+import handlebars from "@primate/handlebars";
 import html from "@primate/frontend/html";
 import htmx from "@primate/frontend/htmx";
-import markdown from "@primate/frontend/markdown";
-import marko from "@primate/frontend/marko";
+import markdown from "@primate/markdown";
+import marko from "@primate/marko";
 import react from "@primate/frontend/react";
 import solid from "@primate/frontend/solid";
 import svelte from "@primate/frontend/svelte";
-import voby from "@primate/frontend/voby";
+import voby from "@primate/voby";
 import vue from "@primate/frontend/vue";
 import webc from "@primate/frontend/webc";
 
@@ -51,9 +49,13 @@ export default {
     includes: ["services"],
   },
   modules: [
+    // backends
+    typescript(),
+    go(),
+    python(),
+    ruby(),
+
     // frontends
-    /*
-    */
     htmx({
       extensions: ["client-side-templates", "head-support"],
       client_side_templates: ["handlebars", "mustache"],
@@ -70,11 +72,7 @@ export default {
     marko(),
     eta(),
     voby(),
-    // bindings
-    typescript(),
-    go(),
-    python(),
-    ruby(),
+
     // stores
     // volatile, per app run, in-memory database
     // comment out and comment in any other option below for other databases

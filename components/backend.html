@@ -1,0 +1,11 @@
+<ul>
+${backends.map(backend =>
+  `<li>
+    ${backend}
+    [<a href="/backend/${backend}">plain text</a>]
+    [<a href="/backend/${backend}/json">json</a>]
+    [<a href="/backend/${backend}/view">view</a>]
+    [<a href="/backend/${backend}/redirect">redirect</a>]
+  </li>`
+  ).join("")}
+</ul>

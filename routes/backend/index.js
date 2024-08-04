@@ -1,6 +1,6 @@
 import view from "primate/handler/view";
 
-const bindings = [
+const backends = [
   "go",
   "python",
   "ruby",
@@ -9,6 +9,6 @@ const bindings = [
 
 export default {
   get() {
-    return view(`binding.html`, { bindings });
+    return view(`backend.html`, { backends });
   },
 };
