@@ -1,1 +1,1 @@
-npm run rebuild && deno run primate
+deno run primate

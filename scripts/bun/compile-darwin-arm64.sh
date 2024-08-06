@@ -1,1 +1,1 @@
-npm run rebuild && bun --bun x primate build darwin-arm64
+bun --bun x primate build darwin-arm64

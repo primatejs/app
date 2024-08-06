@@ -1,1 +1,1 @@
-npm run rebuild && npx primate build && npx primate serve
+npx primate build && npx primate serve

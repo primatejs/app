@@ -1,1 +1,1 @@
-npm run rebuild && bun --bun x primate build linux-x64
+bun --bun x primate build linux-x64

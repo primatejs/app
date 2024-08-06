@@ -1,1 +1,1 @@
-npm run rebuild && npx primate --loglevel=info
+npx primate --loglevel=info

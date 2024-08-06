@@ -1,1 +1,1 @@
-npm run rebuild && bun --bun x primate build windows-x64
+bun --bun x primate build windows-x64

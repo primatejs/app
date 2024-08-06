@@ -1,8 +1,8 @@
 // backends
-/*import go from "@primate/go";
+import go from "@primate/go";
 import python from "@primate/python";
 import ruby from "@primate/ruby";
-import typescript from "@primate/typescript";*/
+import typescript from "@primate/typescript";
 
 // frontends
 import angular from "@primate/angular";

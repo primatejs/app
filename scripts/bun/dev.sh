@@ -1,1 +1,1 @@
-npm run rebuild && bun --bun x primate
+bun --bun x primate
