@@ -20,18 +20,18 @@ import vue from "@primate/vue";
 import webc from "@primate/webc";
 
 // store
-import store from "@primate/store";
+/*import store from "@primate/store";
 import json from "@primate/store/json";
 import mysql from "@primate/mysql";
 import mongodb from "@primate/mongodb";
 import postgresql from "@primate/postgresql";
 import sqlite from "@primate/sqlite";
-import surrealdb from "@primate/surrealdb";
+import surrealdb from "@primate/surrealdb";*/
 
 // misc
-import i18n from "@primate/i18n";
-import session from "@primate/session";
-import native from "@primate/native";
+//import i18n from "@primate/i18n";
+//import session from "@primate/session";
+//import native from "@primate/native";
 
 export default {
   http: {
@@ -92,18 +92,18 @@ export default {
     //store({ driver: postgresql({ username: "primate", database: "primate" }) }),
 
     // SQLite
-    store({ driver: sqlite({ database: ":memory:" })}),
+    //store({ driver: sqlite({ database: ":memory:" })}),
 
     // SurrealDB
     //store({ driver: surrealdb({ username: "primate", password: "primate", database: "primate", namespace: "primate" })}),
 
     // use sessions
-    session(),
+    //session(),
 
     // use internalization
-    i18n({ locale: "en-US" }),
+    //i18n({ locale: "en-US" }),
 
     // add native targets
-    native({ start: "/" }),
+    //native({ start: "/" }),
   ],
 };

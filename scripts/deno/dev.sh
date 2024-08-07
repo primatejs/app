@@ -1,1 +1,1 @@
-deno run primate
+deno run -A npm:primate
